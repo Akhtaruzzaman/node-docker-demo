@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "test-16e5"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "test-16e5"
+  template:
+    metadata:
+      labels:
+        app: "test-16e5"
+    spec:
+      containers:
+        - name: "test-16e5"
+          image: "akhtar.azurecr.io/test"
+          ports:
+          - containerPort: 80
